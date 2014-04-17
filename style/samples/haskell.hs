@@ -4,23 +4,18 @@ module Haskell
     , anotherFunction
     ) where
 
--- Standard libraries
 import Control.Monad.State (state, evalState)
-import Data.List           (foldl')
-import Data.Text           (Text)
-
--- Framework libraries
-import Database.Persistent (runSql)
-import Yesod
-import Yesod.Auth          (requireAuthId, maybeAuthId)
-
--- Appication modules
-import Foundation
-import Settings
-
--- Quaified imports
+import Data.List (foldl')
+import Data.Text (Text)
 import qualified Data.Map  as M
 import qualified Data.Text as T
+
+import Database.Persistent (runSql)
+import Yesod
+import Yesod.Auth (requireAuthId, maybeAuthId)
+
+import Foundation
+import Settings
 
 data Colors = Red | Blue | Green
 
@@ -32,15 +27,15 @@ data HTTPException
     | YouGetTheIdea
 
 data SomeType = SomeType
-    { accessorOne   :: String
-    , accessorTwo   :: String
+    { accessorOne :: String
+    , accessorTwo :: String
     , accessorThree :: String
     } deriving Show
 
 someType :: SomeType
 someType = SomeType
-    { accessorOne   = "foo"
-    , accessorTwo   = "bar"
+    { accessorOne = "foo"
+    , accessorTwo = "bar"
     , accessorThree = theThird
     }
   where
@@ -71,7 +66,7 @@ aLongerFunction =
 
 aCasedFunction x =
     case x of
-        Just y  -> y
+        Just y -> y
         Nothing -> 0
 
 aShortIf x = if x then y else z
@@ -87,10 +82,10 @@ lineBreaks = take 3                              -- prefix
 
 main :: IO ()
 main = do
-    let x    = getX
+    let x = getX
         andY = getY
 
-    a    <- getA
+    a <- getA
     andB <- getB
 
     return $ x + andY + a + andB
