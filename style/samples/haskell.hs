@@ -8,11 +8,11 @@ module Haskell
 import Control.Monad.State (state, evalState)
 import Data.List           (foldl')
 import Data.Text           (Text)
-import Database.Persistent (runSql)
 
 -- Framework libraries
+import Database.Persistent (runSql)
 import Yesod
-import Yesod.Auth (requireAuthId, maybeAuthId)
+import Yesod.Auth          (requireAuthId, maybeAuthId)
 
 -- Appication modules
 import Foundation
