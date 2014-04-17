@@ -315,3 +315,17 @@ Shell
   variables.
 * Use single quotes for strings that don't contain escapes or variables.
 * Use two-space indentation.
+
+Haskell
+-------
+
+* Align tokens vertically.
+* Break long expressions before operators or keywords.
+* Break long type signatures between arguments.
+* Order imports alphabetically in four sections: standard libraries, 
+  framework libraries, application code, and qualified imports.
+* Use comma-first style exports, records, and lists.
+* Use four-space indentation except the `where` keyword which is 
+  indented two spaces [Example][where-example].
+
+[where-example] https://github.com/thoughtbot/guides/blob/master/style/samples/haskell.hs#L46
