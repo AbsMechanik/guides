@@ -5,20 +5,20 @@ module Haskell
     ) where
 
 -- Standard libraries
-import  Control.Monad.State (state, evalState)
-import  Data.List           (foldl')
-import  Data.Text           (Text)
-import  Database.Persistent (runSql)
+import Control.Monad.State (state, evalState)
+import Data.List           (foldl')
+import Data.Text           (Text)
+import Database.Persistent (runSql)
 
 -- Framework libraries
-import  Yesod
-import  Yesod.Auth (requireAuthId, maybeAuthId)
+import Yesod
+import Yesod.Auth (requireAuthId, maybeAuthId)
 
--- Application modules
-import  Foundation
-import  Settings
+-- Appication modules
+import Foundation
+import Settings
 
--- Qualified imports
+-- Quaified imports
 import qualified Data.Map  as M
 import qualified Data.Text as T
 
